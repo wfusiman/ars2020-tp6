@@ -100,7 +100,7 @@ app.route( '/usuario' )
                 respuesta = {
                     error: true,
                     codigo:  501,
-                    mensaje: 'El usuario ha sido creado'
+                    mensaje: 'El usuario no ha sido creado'
                 };
             }
             else {
@@ -126,15 +126,23 @@ app.route( '/usuario' )
                 mensaje: 'El usuario no ha sido creado'
             };
         }
-        else {
+        else if (req.body.nombre != usuario.nombre || req.body.apellido != usuario.apellido) {
             respuesta = {
-                error: false,
-                codigo: 200,
-                mensaje: 'Usuario eliminado'
+                error: true,
+                codigo: 501,
+                mensaje: 'Los datos no coinciden con el usuario creado'
             };
+        }
+        else {
             usuario = {
                 nombre: '',
                 apellido: ''
+            };
+            respuesta = {
+                error: false,
+                codigo: 200,
+                mensaje: 'Usuario eliminado',
+                respuesta: usuario
             };
         }
         res.send( respuesta );
