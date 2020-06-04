@@ -9,6 +9,7 @@ En la carpeta Server ejecutar node index.js
 2. Implentacion PHP de cliente que utilice la API del servidor node.js.
 
 - Despliegue \
-Copiar la carpeta client en el directorio htdocs de la instalacion de Xampp, y acceder mediante el browser a la url:
+Copiar la carpeta client en el directorio htdocs de la instalacion de Xampp. Ejecutar el servidor web Apache.
+Una vez iniciado acceder mediante el browser a la url:
 http://localhost:80/rest \
 Mediante este cliente PHP se pueden realizar las operaciones de buscar (GET), crear (PORT), modificar datos (PUT), y eliminar datos del cliente. 
