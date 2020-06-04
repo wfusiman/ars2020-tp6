@@ -159,5 +159,5 @@ app.use( function( req,res,next ) {
 
 // servidor escucha en el puerto 3000.
 app.listen( 3000, () => {
-    console.log( "El servidor esta inicializando en el puerto 3000" );
+    console.log( "Servidor NodeJS http://localhost:3000" );
 });
